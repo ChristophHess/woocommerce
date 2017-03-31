@@ -1332,7 +1332,7 @@ class WC_Cart {
 			}
 
 			// Cart contents total is based on discounted prices and is used for the final total calculation
-			$this->cart_contents_total += $line_total;
+			$this->cart_contents_total += round($line_total,$this->dp);
 
 			/**
 			 * Store costs + taxes for lines. For tax inclusive prices, we do some extra rounding logic so the stored
