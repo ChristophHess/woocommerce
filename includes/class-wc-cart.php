@@ -1218,7 +1218,7 @@ class WC_Cart {
 
 			// Prices
 			$base_price = $product->get_price();
-			$line_price = $product->get_price() * $values['quantity'];
+			$line_price = round($_product->get_price(),$this->dp) * $values['quantity'];
 
 			// Tax data
 			$taxes = array();
